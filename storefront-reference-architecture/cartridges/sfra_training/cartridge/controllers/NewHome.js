@@ -10,6 +10,7 @@ server.get('Show', function (req, res, next) {
     next();
 });
 
+
 server.get('ListCategories', function (req, res, next) {
 
     var womensCategory = CatalogMgr.getCategory('womens').subCategories;
