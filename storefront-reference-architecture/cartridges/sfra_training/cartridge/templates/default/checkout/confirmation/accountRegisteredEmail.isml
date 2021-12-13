@@ -1,0 +1,19 @@
+<body>
+
+    <h1>${Resource.msg('email.msg.new.registration.dear', 'registration',
+        null)}&nbsp;${pdict.firstName}&nbsp;${pdict.lastName},</h1>
+
+    <p>${Resource.msg('email.msg.new.registration.body1','registration',null)}</p>
+
+    <p><a href="${pdict.url}">${pdict.url}</a></p>
+
+    <p>${Resource.msg('email.msg.new.registration.body2','registration',null)}</p>
+
+    <isif condition="${!empty(pdict.content) && pdict.content.online}">
+    <h1>Some Products You May Like</h1>
+        <isloop items="${pdict.productData}" var="product" status="loopstatus">
+                        <h3>${product.name}</h3>
+                        <a href="${URLUtils.url('Product-Show','pid',product.ID)}">See More</a>
+        </isloop>
+    </isif>
+</body>

@@ -5,14 +5,13 @@ var CatalogMgr = require('dw/catalog/CatalogMgr');
 
 server.get('Show', function (req, res, next) {
 
-    res.render('newHomepage');
+    res.render('newHomepage'); 
 
     next();
 });
 
 
 server.get('ListCategories', function (req, res, next) {
-
     var womensCategory = CatalogMgr.getCategory('womens').subCategories;
     var mensCategory = CatalogMgr.getCategory('mens-clothing').subCategories;
 
