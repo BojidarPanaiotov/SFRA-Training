@@ -1,0 +1,44 @@
+{
+    "name": "Custom Category",
+    "description": "Category component",
+    "group": "Training",
+    "attribute_definition_groups": [
+        {
+            "id": "custom_component",
+            "name": "category component",
+            "description": "Used for custom category",
+            "attribute_definitions": [
+                {
+                    "id": "category_ID",
+                    "name": "Category ID",
+                    "description": "Category ID",
+                    "type": "category",
+                    "required": true
+                },
+                {
+                    "id": "category_desc",
+                    "name": "Category Short Description",
+                    "description": "Category short description",
+                    "type": "string",
+                    "required": false
+                },
+                {
+                    "id": "category_title",
+                    "name": "Custom Display Name",
+                    "description": "Overwrite the category name if needed.",
+                    "type": "string",
+                    "required": true
+                },
+                {
+                    "id": "category_position",
+                    "name": "Custom Position",
+                    "description": "Position of the category",
+                    "type": "enum",
+                    "values": ["top","bottom"],
+                    "required": true
+                }
+            ]
+        }
+    ],
+    "region_definitions": []
+}

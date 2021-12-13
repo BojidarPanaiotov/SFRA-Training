@@ -1,0 +1,19 @@
+<isscript>
+    var assets = require('*/cartridge/scripts/assets.js');
+    assets.addCss('/css/customCategory.css');
+</isscript>
+
+<div class="cat_container">
+    <div class="inner_cat_container">
+    <isif condition="${pdict.category_position == 'top'}">
+        <img id="cat_img"
+            src="https://i.picsum.photos/id/685/200/200.jpg?hmac=1IjDFMSIa0T_JSvcq79_e2NWPwRJg61Ufbfu4eM4HvA" alt="">
+    </isif>
+        <h1 class="cat_title">${pdict.category_title}</h1>
+        <div class="cat_desc">${pdict.category_desc}</div>
+    <isif condition="${pdict.category_position == 'bottom'}">
+        <img id="cat_img"
+            src="https://i.picsum.photos/id/685/200/200.jpg?hmac=1IjDFMSIa0T_JSvcq79_e2NWPwRJg61Ufbfu4eM4HvA" alt="">
+    </isif>
+    </div>
+</div>
