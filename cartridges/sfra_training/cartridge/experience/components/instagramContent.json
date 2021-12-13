@@ -1,0 +1,22 @@
+{
+    "name": "Instagram",
+    "description": "Content component for Instagram posts",
+    "group": "commerce_assets",
+    "attribute_definition_groups": [
+        {
+            "id": "instagram_post",
+            "name": "Instagram attribute",
+            "description": "Instagram attribute definition",
+            "attribute_definitions": [
+                {
+                    "id": "instagram_url",
+                    "name": "InstagramPost",
+                    "description": "Place the URL here",
+                    "type": "url",
+                    "required": true
+                }
+            ]
+        }
+    ],
+    "region_definitions": []
+}

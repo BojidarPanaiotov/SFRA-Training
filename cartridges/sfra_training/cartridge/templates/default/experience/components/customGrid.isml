@@ -1,0 +1,12 @@
+<h1 class="text-center">Custom Grid System</h1>
+
+<isscript>
+    var assets = require('*/cartridge/scripts/assets.js');
+</isscript>
+    <div class="row">
+    <isloop items="${pdict.iterationsArray}" var="item" status="loopstatus">
+        <isprint value="${pdict.regions[item].setClassName(pdict.colClass).render()}" encoding="off"/>
+    </isloop>
+    </div>
+
+

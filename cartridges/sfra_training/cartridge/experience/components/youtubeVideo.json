@@ -1,0 +1,22 @@
+{
+    "name": "YouTube Content",
+    "description": "Content component for embedding YouTube videos",
+    "group": "commerce_assets",
+    "attribute_definition_groups": [
+        {
+            "id": "youtubeVideo",
+            "name": "YouTube Video content",
+            "description": "YouTube Video content component",
+            "attribute_definitions": [
+                {
+                    "id": "video_ID",
+                    "name": "YouTube video ID",
+                    "description": "Place the vide ID here",
+                    "type": "string",
+                    "required": true
+                }
+            ]
+        }
+    ],
+    "region_definitions": []
+}

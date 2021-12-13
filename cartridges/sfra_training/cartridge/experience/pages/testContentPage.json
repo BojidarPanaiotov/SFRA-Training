@@ -1,0 +1,15 @@
+{
+    "name":"Content Page",
+    "description":"A Storefront Page Type made for testing purposes",
+    "region_definitions":[
+      {
+        "id":"headerbanner",
+        "name":"Header Banner",
+        "max_components": 1
+      },
+      {
+        "id":"content",
+        "name":"Content"
+      }
+    ]
+}

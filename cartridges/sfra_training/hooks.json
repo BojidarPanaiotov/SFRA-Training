@@ -1,0 +1,8 @@
+{
+    "hooks": [
+        {
+            "name": "dw.ocapi.shop.customer.address.afterPATCH",
+            "script": "./cartridge/scripts/hooks/addressAfterPatch"
+        }
+    ]
+}

@@ -1,0 +1,33 @@
+<isdecorate template="common/layout/page">
+
+    <isscript>
+        var assets = require('*/cartridge/scripts/assets.js');
+        assets.addJs('/js/heroSlider.js');
+        assets.addCss('/css/heroSlider.css');
+    </isscript>
+
+    <div class="main">
+
+        <h1>Hero Slider Task 1</h1>
+
+        <isslot id="hero_slider" description="Content slot" context="global" />
+        <div class="button_group">
+            <button class="asset_button" type="submit" onclick="currentSlide(0)"></button>
+            <button class="asset_button" type="submit" onclick="currentSlide(1)"></button>
+            <button class="asset_button" type="submit" onclick="currentSlide(2)"></button>
+        </div>
+
+    </div>
+</isdecorate>
+
+<iscomment> 
+
+    Content assets names are 
+        heroSliderOne
+        heroSliderTwo
+        heroSliderThree 
+
+    Content slot name is 
+        hero_slider
+
+ </iscomment>

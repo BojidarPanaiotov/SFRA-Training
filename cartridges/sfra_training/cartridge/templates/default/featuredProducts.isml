@@ -1,0 +1,7 @@
+<isdecorate template="common/layout/page">
+
+    <h1>Featured Products Slot Task 3</h1>
+
+    <isslot id="featured_products" description="Content slot" context="global" />
+
+</isdecorate>

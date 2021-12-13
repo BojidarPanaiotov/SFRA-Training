@@ -1,0 +1,246 @@
+{
+    "name": "Custom Grid ",
+    "description": "This is a custom layout component.",
+    "group": "commerce_layouts",
+    "attribute_definition_groups": [
+        {
+            "id": "custom_rows_cols",
+            "name": "Custom Grid",
+            "description": "Grid component",
+            "attribute_definitions": [
+                {
+                    "id": "rows_count",
+                    "name": "Total rows amount",
+                    "description": "Specify how many rows do you need.",
+                    "type": "enum",
+                    "values": [
+                        "1",
+                        "2",
+                        "3",
+                        "4",
+                        "5"
+                    ],
+                    "required": true         
+                },
+                {
+                    "id": "cols_count",
+                    "name": "Columns amount per row",
+                    "description": "Specify how many columns do you need per row.",
+                    "type": "enum",
+                    "values": [
+                        "1",
+                        "2",
+                        "3",
+                        "4"
+                    ],
+                    "required": true
+                }
+                    
+            ]
+        }
+    ],
+    "region_definitions": [
+        {
+            "id":"element1",
+            "name":"Grind Element 1",
+            "max_components":1,
+            "component_type_exclusions": [
+                { "type_id": "commerce_layouts.mobileGrid3r2c" },
+                { "type_id": "commerce_layouts.mobileGrid2r3c" },
+                { "type_id": "commerce_layouts.carousel" },
+                { "type_id": "commerce_layouts.mobileGridLookBook" }
+            ]
+        },
+        {
+            "id":"element2",
+            "name":"Grind Element 2",
+            "max_components":1,
+            "component_type_exclusions": [
+                { "type_id": "commerce_layouts.mobileGrid2r3c" },
+                { "type_id": "commerce_layouts.carousel" },
+                { "type_id": "commerce_layouts.mobileGridLookBook" }
+            ]
+        },
+        {
+            "id":"element3",
+            "name":"Grind Element 3",
+            "max_components":1,
+            "component_type_exclusions": [
+                { "type_id": "commerce_layouts.mobileGrid2r3c" },
+                { "type_id": "commerce_layouts.carousel" },
+                { "type_id": "commerce_layouts.mobileGridLookBook" }
+            ]
+        },
+        {
+            "id":"element4",
+            "name":"Grind Element 4",
+            "max_components":1,
+            "component_type_exclusions": [
+                { "type_id": "commerce_layouts.mobileGrid2r3c" },
+                { "type_id": "commerce_layouts.carousel" },
+                { "type_id": "commerce_layouts.mobileGridLookBook" }
+            ]
+        },
+        {
+            "id":"element5",
+            "name":"Grind Element 5",
+            "max_components":1,
+            "component_type_exclusions": [
+                { "type_id": "commerce_layouts.mobileGrid2r3c" },
+                { "type_id": "commerce_layouts.carousel" },
+                { "type_id": "commerce_layouts.mobileGridLookBook" }
+            ]
+        },
+        {
+            "id":"element6",
+            "name":"Grind Element 6",
+            "max_components":1,
+            "component_type_exclusions": [
+                { "type_id": "commerce_layouts.mobileGrid2r3c" },
+                { "type_id": "commerce_layouts.carousel" },
+                { "type_id": "commerce_layouts.mobileGridLookBook" }
+            ]
+        },
+        {
+            "id":"element7",
+            "name":"Grind Element 7",
+            "max_components":1,
+            "component_type_exclusions": [
+                { "type_id": "commerce_layouts.mobileGrid2r3c" },
+                { "type_id": "commerce_layouts.carousel" },
+                { "type_id": "commerce_layouts.mobileGridLookBook" }
+            ]
+        },
+        {
+            "id":"element8",
+            "name":"Grind Element 8",
+            "max_components":1,
+            "component_type_exclusions": [
+                { "type_id": "commerce_layouts.mobileGrid2r3c" },
+                { "type_id": "commerce_layouts.carousel" },
+                { "type_id": "commerce_layouts.mobileGridLookBook" }
+            ]
+        },
+        {
+            "id":"element9",
+            "name":"Grind Element 9",
+            "max_components":1,
+            "component_type_exclusions": [
+                { "type_id": "commerce_layouts.mobileGrid2r3c" },
+                { "type_id": "commerce_layouts.carousel" },
+                { "type_id": "commerce_layouts.mobileGridLookBook" }
+            ]
+        },
+        {
+            "id":"element10",
+            "name":"Grind Element 10",
+            "max_components":1,
+            "component_type_exclusions": [
+                { "type_id": "commerce_layouts.mobileGrid2r3c" },
+                { "type_id": "commerce_layouts.carousel" },
+                { "type_id": "commerce_layouts.mobileGridLookBook" }
+            ]
+        },
+        {
+            "id":"element11",
+            "name":"Grind Element 11",
+            "max_components":1,
+            "component_type_exclusions": [
+                { "type_id": "commerce_layouts.mobileGrid2r3c" },
+                { "type_id": "commerce_layouts.carousel" },
+                { "type_id": "commerce_layouts.mobileGridLookBook" }
+            ]
+        },
+        {
+            "id":"element12",
+            "name":"Grind Element 12",
+            "max_components":1,
+            "component_type_exclusions": [
+                { "type_id": "commerce_layouts.mobileGrid2r3c" },
+                { "type_id": "commerce_layouts.carousel" },
+                { "type_id": "commerce_layouts.mobileGridLookBook" }
+            ]
+        },
+        {
+            "id":"element13",
+            "name":"Grind Element 13",
+            "max_components":1,
+            "component_type_exclusions": [
+                { "type_id": "commerce_layouts.mobileGrid2r3c" },
+                { "type_id": "commerce_layouts.carousel" },
+                { "type_id": "commerce_layouts.mobileGridLookBook" }
+            ]
+        },
+        {
+            "id":"element14",
+            "name":"Grind Element 14",
+            "max_components":1,
+            "component_type_exclusions": [
+                { "type_id": "commerce_layouts.mobileGrid2r3c" },
+                { "type_id": "commerce_layouts.carousel" },
+                { "type_id": "commerce_layouts.mobileGridLookBook" }
+            ]
+        },
+        {
+            "id":"element15",
+            "name":"Grind Element 15",
+            "max_components":1,
+            "component_type_exclusions": [
+                { "type_id": "commerce_layouts.mobileGrid2r3c" },
+                { "type_id": "commerce_layouts.carousel" },
+                { "type_id": "commerce_layouts.mobileGridLookBook" }
+            ]
+        },
+        {
+            "id":"element16",
+            "name":"Grind Element 16",
+            "max_components":1,
+            "component_type_exclusions": [
+                { "type_id": "commerce_layouts.mobileGrid2r3c" },
+                { "type_id": "commerce_layouts.carousel" },
+                { "type_id": "commerce_layouts.mobileGridLookBook" }
+            ]
+        },
+        {
+            "id":"element17",
+            "name":"Grind Element 17",
+            "max_components":1,
+            "component_type_exclusions": [
+                { "type_id": "commerce_layouts.mobileGrid2r3c" },
+                { "type_id": "commerce_layouts.carousel" },
+                { "type_id": "commerce_layouts.mobileGridLookBook" }
+            ]
+        },
+        {
+            "id":"element18",
+            "name":"Grind Element 18",
+            "max_components":1,
+            "component_type_exclusions": [
+                { "type_id": "commerce_layouts.mobileGrid2r3c" },
+                { "type_id": "commerce_layouts.carousel" },
+                { "type_id": "commerce_layouts.mobileGridLookBook" }
+            ]
+        },
+        {
+            "id":"element19",
+            "name":"Grind Element 19",
+            "max_components":1,
+            "component_type_exclusions": [
+                { "type_id": "commerce_layouts.mobileGrid2r3c" },
+                { "type_id": "commerce_layouts.carousel" },
+                { "type_id": "commerce_layouts.mobileGridLookBook" }
+            ]
+        },
+        {
+            "id":"element20",
+            "name":"Grind Element 20",
+            "max_components":1,
+            "component_type_exclusions": [
+                { "type_id": "commerce_layouts.mobileGrid2r3c" },
+                { "type_id": "commerce_layouts.carousel" },
+                { "type_id": "commerce_layouts.mobileGridLookBook" }
+            ]
+        }
+        
+    ]
+}
