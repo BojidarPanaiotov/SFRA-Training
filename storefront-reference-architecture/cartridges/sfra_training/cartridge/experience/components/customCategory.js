@@ -7,9 +7,10 @@ module.exports.render = function (context) {
     var model = new HashMap();
     var content = context.content;
 
-    model.category_title = content.category_title;
+    model.category_id = content.category.ID;
+    model.category_title = content.category_title?content.category_title:content.category.displayName;
     model.category_position = content.category_position;
-    model.category_desc = content.category_desc?content.category_desc:content.category_ID.pageDescription;
+    model.category_desc = content.category_desc?content.category_desc:content.category.pageDescription;
 
     return new Template('experience/components/customCategory').render(model).text;
 };

@@ -9,7 +9,7 @@
             "description": "Used for custom category",
             "attribute_definitions": [
                 {
-                    "id": "category_ID",
+                    "id": "category",
                     "name": "Category ID",
                     "description": "Category ID",
                     "type": "category",
@@ -27,7 +27,7 @@
                     "name": "Custom Display Name",
                     "description": "Overwrite the category name if needed.",
                     "type": "string",
-                    "required": true
+                    "required": false
                 },
                 {
                     "id": "category_position",
