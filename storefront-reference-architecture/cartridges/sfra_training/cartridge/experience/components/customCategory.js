@@ -8,6 +8,7 @@ module.exports.render = function (context) {
     var content = context.content;
 
     model.category_id = content.category.ID;
+    model.category_image = content.category_image.file.url;
     model.category_title = content.category_title?content.category_title:content.category.displayName;
     model.category_position = content.category_position;
     model.category_desc = content.category_desc?content.category_desc:content.category.pageDescription;

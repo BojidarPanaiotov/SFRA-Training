@@ -36,6 +36,13 @@
                     "type": "enum",
                     "values": ["top","bottom"],
                     "required": true
+                },
+                {
+                    "id": "category_image",
+                    "name": "Custom Category Image",
+                    "description": "Position of the category",
+                    "type": "image",
+                    "required": true
                 }
             ]
         }

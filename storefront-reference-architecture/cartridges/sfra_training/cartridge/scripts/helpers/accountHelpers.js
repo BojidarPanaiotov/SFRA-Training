@@ -16,7 +16,7 @@ function sendCreateAccountEmailCustom(registeredUser,productData,content) {
         firstName: registeredUser.firstName,
         lastName: registeredUser.lastName,
         url: URLUtils.https('Login-Show'),
-        productData: productData,
+        data: productData,
         content: content
     };
 

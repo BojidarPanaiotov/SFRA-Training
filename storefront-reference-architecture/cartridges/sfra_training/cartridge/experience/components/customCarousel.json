@@ -1,0 +1,28 @@
+{
+    "name": "Custom Carousel",
+    "description": "Carousel with sliders for product tiles",
+    "group": "Training",
+    "attribute_definition_groups": [
+        {
+            "id": "carousel_slider",
+            "name": "Carousel Slider",
+            "description": "Used for custom carousel slider",
+            "attribute_definitions": [
+                {
+                    "id": "carousel_title",
+                    "name": "Carousel Title",
+                    "description": "Category title",
+                    "type": "string",
+                    "required": true
+                }
+            ]
+        }
+    ],
+    "region_definitions": [
+        {
+          "id":"slides",
+          "name":"Slides",
+          "max_components":3
+        }
+      ]
+}

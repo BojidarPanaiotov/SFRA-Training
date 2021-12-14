@@ -1,0 +1,10 @@
+<div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
+  <div class="carousel-inner">
+        <isprint value="${pdict.regions.slides.render()}" encoding="off"/>
+        <ol class="pd-carousel-indicators">
+        <isloop items=${pdict.regions.slides.region.visibleComponents} var="indicator" status="loopState">
+            <li class="${loopState.first ? 'active' : ''}" data-position="${loopState.index}"></li>
+        </isloop>
+    </ol>
+  </div>
+</div>
