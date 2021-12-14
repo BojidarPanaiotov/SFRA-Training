@@ -1,0 +1,50 @@
+{
+    "name": "Hero Content",
+    "description": "Customizable hero content component",
+    "group": "Training",
+    "attribute_definition_groups": [
+        {
+            "id": "hero_content",
+            "name": "hero content component",
+            "description": "Used for custom hero content",
+            "attribute_definitions": [
+                {
+                    "id": "title",
+                    "name": "Content Title",
+                    "description": "The title of the content",
+                    "type": "string",
+                    "required": false
+                },
+                {
+                    "id": "product",
+                    "name": "Product",
+                    "description": "The product for the hero content",
+                    "type": "product",
+                    "required": true
+                },
+                {
+                    "id": "bg_image",
+                    "name": "Background Image",
+                    "description": "The background of the hole content",
+                    "type": "image",
+                    "required": true
+                },
+                {
+                    "id": "short_desc",
+                    "name": "Short Description",
+                    "description": "Short description about the content",
+                    "type": "string",
+                    "required": true
+                },
+                {
+                    "id": "cta",
+                    "name": "Content Hero Product",
+                    "description": "A redirection text, which on click is sending the user to the current product page",
+                    "type": "string",
+                    "required": false
+                }
+            ]
+        }
+    ],
+    "region_definitions": []
+}
