@@ -5,7 +5,6 @@ var base = module.superModule;
 var URLUtils = require('dw/web/URLUtils');
 var endpoints = require('*/cartridge/config/oAuthRenentryRedirectEndpoints');
 
-
 function sendCreateAccountEmailCustom(registeredUser,productData,content) {
     var emailHelpers = require('*/cartridge/scripts/helpers/emailHelpers');
     var Site = require('dw/system/Site');

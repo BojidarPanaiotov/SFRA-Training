@@ -21,8 +21,7 @@
     "region_definitions": [
         {
           "id":"slides",
-          "name":"Slides",
-          "max_components":3
+          "name":"Slides"
         }
       ]
 }
