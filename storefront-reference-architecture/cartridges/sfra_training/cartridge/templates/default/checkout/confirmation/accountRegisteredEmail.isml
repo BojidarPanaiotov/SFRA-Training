@@ -9,11 +9,6 @@
 
     <p>${Resource.msg('email.msg.new.registration.body2','registration',null)}</p>
 
-    <isif condition="${!empty(pdict.content) && pdict.content.online}">
-    <isprint value="${pdict.data[0].htmlHeader}" encoding="off" />
-        <isloop items="${pdict.data[1].productData}" var="product" status="loopstatus">
-            <isinclude template="checkout/confirmation/simpleProductTile"/>
-        </isloop>
-    <isprint value="${pdict.data[0].htmlFooter}" encoding="off" />
-    </isif>
+    <isinclude template="checkout/confirmation/suggestProductsEmail" />
+
 </body>

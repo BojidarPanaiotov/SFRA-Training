@@ -134,36 +134,13 @@ server.replace(
 
                 if (registrationForm.validForm) {
                     // INJECTED CODE HERE
-                    var ProductMgr = require('dw/catalog/ProductMgr');
-                    var ContentMgr = require('dw/content/ContentMgr');
+                    var utilFunctions = require('*/cartridge/scripts/utils/utilFunctions');
 
-                    // Getting the content asset (Products ids separated with commas)
-                    var content = ContentMgr.getContent('suggest_products_email');
+                    // Getting content asset and processing the html properly
+                    var result = utilFunctions.ProcessSuggestionProductsAsset('suggest_products_email');
 
-                    // Actual ID's of all configured products
-                    var htmlContentLines = content.custom.body.markup.split('\n');
-
-                    var htmlHeader = htmlContentLines[0];
-                    var htmlFooter = htmlContentLines[htmlContentLines.length - 1];
-
-                    // Array with actual products
-                    var data = [{
-                            htmlHeader: htmlHeader,
-                            htmlFooter: htmlFooter
-                        },
-                        {
-                            productData: []
-                        }
-                    ];
-
-                    // The loop is starting from 1 to becouse the first line is the HTML header
-                    for (let index = 1; index < htmlContentLines.length - 1; index++) {
-                        // Getting the ID of the product
-                        var productId = (htmlContentLines[index].split('=')[1]).trim();
-                        var currPorduct = ProductMgr.getProduct(productId);
-
-                        data[1].productData.push(currPorduct);
-                    }
+                    var data = [result[0], result[1]];
+                    var content = result[2].content;
 
                     accountHelpers.sendCreateAccountEmailCustom(authenticatedCustomer.profile, data, content);
                     // INJECTED CODE HERE

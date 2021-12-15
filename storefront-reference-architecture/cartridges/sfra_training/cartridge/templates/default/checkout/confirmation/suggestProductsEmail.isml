@@ -1,0 +1,7 @@
+<isif condition="${!empty(pdict.content) && pdict.content.online}">
+    <isprint value="${pdict.data[0].htmlHeader}" encoding="off" />
+    <isloop items="${pdict.data[1].productData}" var="product" status="loopstatus">
+        <isinclude template="checkout/confirmation/simpleProductTile" />
+    </isloop>
+    <isprint value="${pdict.data[0].htmlFooter}" encoding="off" />
+</isif>
