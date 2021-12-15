@@ -6,11 +6,11 @@
     Controller: NewHome  
     Route: Show  
 
-    ### Content Slot for listing categories  
+### Content Slot for listing categories  
     Controller: NewHome  
     Route: ListCategories  
 
-    ### Featured Products  
+### Featured Products  
     Controller: NewHome  
     Route: Featured  
 
