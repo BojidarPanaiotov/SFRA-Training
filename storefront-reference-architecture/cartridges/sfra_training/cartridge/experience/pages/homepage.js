@@ -14,5 +14,5 @@ module.exports.render = function (context) {
     // automatically register configured regions
     model.regions = PageRenderHelper.getRegionModelRegistry(page);
 
-    return new Template('experience/pages/testContentPage').render(model).text;
+    return new Template('experience/pages/homepage').render(model).text;
 };

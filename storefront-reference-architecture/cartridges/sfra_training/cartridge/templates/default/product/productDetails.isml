@@ -130,7 +130,6 @@
                         pdict.data.brand)}"
                             encoding="off" />
                         <iselse />
-
                     </isif>
                     <!-- Social Sharing Icons -->
                     <div class="row">

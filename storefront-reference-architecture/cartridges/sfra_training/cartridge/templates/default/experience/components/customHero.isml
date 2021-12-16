@@ -1,10 +1,14 @@
 <isscript>
-    var assets = require('*/cartridge/scripts/assets.js');
-    assets.addCss('/css/customHero.css');
+        var assets = require('*/cartridge/scripts/assets.js');
+        assets.addCss('/css/customHero.css');
 </isscript>
 
-<div class="hero_container" style="background-image: url('${pdict.bg_image}');">
-    <h1 id="hero_title">${pdict.title}</h1>
-    <p id="hero_short_desc">${pdict.short_desc}</p>
-    <a id="hero_cta" href="${'https://demo-disney-ecommera.demandware.net'+URLUtils.url('Product-Show','pid',pdict.product.ID)}">${pdict.cta}</a>
+<div class="hero-image" style="background-image: url(${model.bg_image})">
+    <div class="container">
+        <h1 id="hero-header">${pdict.title}</h1>
+        <p id="hero-desc">${pdict.short_desc}r</p>
+        <div id="hero-cta">
+            <a id="cta" href="${'https://demo-disney-ecommera.demandware.net'+URLUtils.url('Product-Show','pid',pdict.product.ID)}">${pdict.cta}</a>
+        </div>
+    </div>
 </div>

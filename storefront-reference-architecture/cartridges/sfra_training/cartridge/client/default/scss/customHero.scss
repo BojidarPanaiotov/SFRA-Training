@@ -1,35 +1,31 @@
-.hero_container{
-  border: 1px solid black;
-  background-image: url('https://img.freepik.com/free-photo/hand-painted-watercolor-background-with-sky-clouds-shape_24972-1095.jpg?size=626&ext=jpg');
-  background-repeat: no-repeat;
-  background-size: cover;
-  padding: 10px;
+.hero-image{
+  width: 60%;
+  height: 200px;
   margin: 0 auto;
-  width: 250px;
-  height: 310px;
+  border: 1px solid black;
 }
 
-#hero_title{
+.container{
+  border: 1px solid grey;
+  margin: 20px 20px 5px 20px;
+  padding: 10px;
+}
+#hero-header{
   text-align: center;
-  border-top: 2px solid grey;
-  border-bottom: 2px solid grey;
-  font-size: 20px;
 }
-
-#hero_short_desc{
-  text-align: justify;
-  position: relative;
-  text-overflow: ellipsis;
-  height: 155px;
-  overflow: hidden;
-  word-wrap: break-word;
-}
-
-#hero_cta{
-  display: block;
-  position: relative;
-  font-size: 20px;
-  color: blue;
+#hero-desc{
   text-align: center;
-  top: 20px;
+}
+#hero-cta{
+  text-align: center;
+  color: grey;
+  text-decoration: none;
+
+}
+
+#cta{
+  text-decoration: none;
+  padding: 2px;
+  color: black;
+  text-decoration: underline;
 }

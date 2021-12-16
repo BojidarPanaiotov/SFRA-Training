@@ -34,7 +34,7 @@
                     "name": "Short Description",
                     "description": "Short description about the content",
                     "type": "string",
-                    "required": true
+                    "required": false
                 },
                 {
                     "id": "cta",

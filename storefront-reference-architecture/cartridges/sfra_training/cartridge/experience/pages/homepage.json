@@ -1,5 +1,5 @@
 {
-    "name":"Content Page",
+    "name":"Home Page",
     "description":"A Storefront Page Type made for testing purposes",
     "region_definitions":[
       {
@@ -10,6 +10,11 @@
       {
         "id":"content",
         "name":"Content"
+      },
+      {
+        "id":"footer",
+        "name":"Footer",
+        "max_components": 1
       }
     ]
 }

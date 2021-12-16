@@ -4,8 +4,6 @@ var server = require('server');
 var CatalogMgr = require('dw/catalog/CatalogMgr');
 
 server.get('Show', function (req, res, next) {
-    var COHelpers = require('*/cartridge/scripts/checkout/checkoutHelpers');
-
     res.render('newHomepage'); 
 
     next();
