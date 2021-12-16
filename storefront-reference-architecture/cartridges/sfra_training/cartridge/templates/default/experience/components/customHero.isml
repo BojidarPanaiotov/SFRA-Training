@@ -3,8 +3,8 @@
         assets.addCss('/css/customHero.css');
 </isscript>
 
-<div class="hero-image" style="background-image: url(${model.bg_image})">
-    <div class="container">
+<div class="hero-image" style="background-image: url(${pdict.bg_image});">
+    <div class="hero-container">
         <h1 id="hero-header">${pdict.title}</h1>
         <p id="hero-desc">${pdict.short_desc}r</p>
         <div id="hero-cta">

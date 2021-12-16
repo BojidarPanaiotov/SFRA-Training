@@ -1,32 +1,39 @@
-.cat_container{
-    border: 1px solid black;
-    width: 400px;
-    height: 450px;
-    margin: 0 auto;
-  }
-  
-  .cat_title{
-    display: block;
-    text-align: center;
-    overflow: hidden;
-    font-size: 50px;
-    color: black;
-  }
-  
-  .cat_desc{
-    margin: 15px;
-    border: 1px solid black;
-    overflow: hidden;
-    word-wrap: break-word;
-    padding: 10px;
-    height: 100px;
-    text-align: center;
-  }
+.hero-section {
+  background: url("https://www.thoughtco.com/thmb/C7RiS4QG5TXcBG2d_Sh9i4hFpg0=/3620x2036/smart/filters:no_upscale()/close-up-of-clothes-hanging-in-row-739240657-5a78b11f8e1b6e003715c0ec.jpg") 50% no-repeat;
+  background-size: cover;
+  height: 400px;
+  text-align: center;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
 
-  #cat_img{
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  width: 50%;
-  border-radius: 50%;
-  }
+.hero-section .hero-section-text {
+  color: #fefefe;
+  text-shadow: 1px 1px 2px #0a0a0a;
+}
+
+.hero-section-text{
+  position: relative;
+  padding-left: 30rem;
+  padding-right: 30rem;
+}
+
+#hero-link{
+  color: white;
+  font-size: 60px;
+  text-decoration: none;
+}
+
+#hero-link:hover{
+  text-decoration: underline;
+
+}
+
+

@@ -11,9 +11,9 @@ module.exports.render = function (context) {
     
     model.title = content.carousel_title;
     model.regions = PageRenderHelper.getRegionModelRegistry(component);
-    model.regions.slides.setClassName('carousel-inner row row-test');
+    model.regions.slides.setClassName('carousel-inner row col-6 mx-auto');
     model.regions.slides.setComponentClassName('carousel-item col-12');
-    model.regions.slides.setComponentClassName('carousel-item active', { position: 0 });
+    model.regions.slides.setComponentClassName('carousel-item col-12 active', { position: 0 });
 
     return new Template('experience/components/customCarousel').render(model).text;
 };

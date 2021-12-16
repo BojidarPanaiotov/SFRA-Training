@@ -33,3 +33,33 @@
     Controllers: Account and CheckoutServices  
     Util Function: cartridge/scripts/utils/utilFunction.js  
     Templates: accountRegisteredEmail, confirmationEmail and suggestProductsEmail  
+
+# Page Designer
+
+## 1. Extending Home Page  
+
+### Information
+    Controller: Home
+    Page Designer page names: homepage and homepageCustom
+    Site Preferences Group Name: pageDesignerHomepage (with enum string homepage/customHomepage)
+    Files: homepage.json, homepage.js and the template homepage.isml 
+
+## 2. Custom Hero Component  
+
+### Information
+    Files: customHero.json, customHero.js and the template customHero.isml
+
+## 3. Custom Layout Component
+
+### Information
+    Files: responsiveMobileDesktopGrid.json, responsiveMobileDesktopGrid.js and the template mobileResponsiveGrid.isml
+    
+## 3. Custom Category Component
+
+### Information
+    Files: customCategory.json, customCategory.js and the template customCategory.isml
+
+## 4. Custom Carousel Component
+
+### Information
+    Files: customCarousel.json, customCarousel.js and the template customCarousel.isml

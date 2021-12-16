@@ -3,17 +3,10 @@
     assets.addCss('/css/customCategory.css');
 </isscript>
 
-<div class="cat_container">
-    <div class="inner_cat_container">
-    <isif condition="${pdict.category_position == 'top'}">
-        <img id="cat_img"
-            src="${pdict.category_image}" alt="">
-    </isif>
-        <a href="${URLUtils.url('Search-Show','cgid',pdict.category_id)}" class="cat_title">${pdict.category_title}</a>
-        <div class="cat_desc">${pdict.category_desc}</div>
-    <isif condition="${pdict.category_position == 'bottom'}">
-        <img id="cat_img"
-            src="${pdict.category_image}" alt="">
-    </isif>
+<div class="hero-section" style="">
+    <div class="hero-section-text" style="${pdict.category_position}">
+        <a id="hero-link" href="${URLUtils.url('Search-Show','cgid',pdict.category_id)}"
+            class="cat_title">${pdict.category_title}</a>
+        <p>${pdict.category_desc}</p>
     </div>
 </div>
