@@ -1,0 +1,9 @@
+<isloop items="${slotcontent.content}" var="category" status="loopstatus">
+    <div class="main_container">
+        <h2 class="text-center">${category.displayName}</h2>
+        <img class="image" src="${category.custom.slotBannerImage.URL}" alt="Category Image">
+        <div class="desc">
+            ${category.pageDescription}
+        </div>
+    </div>
+</isloop>

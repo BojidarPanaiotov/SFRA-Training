@@ -3,33 +3,6 @@
         var assets = require('*/cartridge/scripts/assets.js');
         assets.addCss('/css/listCategories.css');
     </isscript>
-
-    <h1>Category Slot Task 2</h1>
-
-    <isif condition="${customer.authenticated}">
-        <isset name="categories" value="${pdict.womensResult}" scope="page" />
-    <iselse/>
-        <h2>Login to see womens categories</h2>
-        <isset name="categories" value="${pdict.mensResult}" scope="page" />
-    </isif>
-
-    <isloop items="${categories}" var="category" status="loopstatus">
-        <div class="main_container">
-            <h2 class="text-center">${category.name}</h2>
-            <img class="image" src="${category.image}" alt="Category Image">
-            <div class="desc">
-                ${category.description}
-            </div>
-        </div>
-    </isloop>
-
-    <iscomment>
-        <isslot id="list_categories_tiles" description="Content slot" context="global" />
-    </iscomment>
-
-    <iscomment>
-
-        Uncomment the slot above to see almost the same result but with slot
-
-    </iscomment>
+    
+    <isslot id="list-categories" context="global" description="" context-object="" preview-url="" />
 </isdecorate>
