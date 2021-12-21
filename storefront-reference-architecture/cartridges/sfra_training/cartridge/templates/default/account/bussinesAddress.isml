@@ -1,8 +1,23 @@
+<h3>Bussines Address</h3>
 <form
-    action="${URLUtils.url('Address-SaveAddress', 'addressId', pdict.addressId)}"
+    action="${URLUtils.url('FormTesting-Save')}"
     class="address-form"
     method="POST"
     <isprint value="${pdict.addressForm.attributes}" encoding="off" />>
+    <!-- Address Type -->
+    <label class="form-control-label" for="privateAddress">
+                    <isprint value="${pdict.addressForm.addressTypeFields.privateAddress.label}" encoding="htmlcontent" />
+                </label>
+                <input type="radio" name="addressType" id="privateAddress"
+                    <isprint value="${pdict.addressForm.addressTypeFields.privateAddress.attributes}" encoding="off" />
+                    autocomplete="given-name">
+          
+                <label class="form-control-label" for="bussinesAddress">
+                    <isprint value="${pdict.addressForm.addressTypeFields.bussinesAddress.label}" encoding="htmlcontent" />
+                </label>
+                <input type="radio" name="addressType" id="bussinesAddress"
+                    <isprint value="${pdict.addressForm.addressTypeFields.bussinesAddress.attributes}" encoding="off" />
+                    autocomplete="given-name" checked>
     <!-- Address Title -->
     <div class="form-group
         ${pdict.addressForm.addressId.mandatory === true ? 'required' : ''}">
@@ -43,7 +58,28 @@
             </div>
         </div>
     </div>
-
+    <iscomment> Company Name </iscomment>
+    <div class="form-group
+        ${pdict.addressForm.companyName.mandatory === true ? 'required' : ''}">
+        <label class="form-control-label" for="companyName">
+            <isprint value="${pdict.addressForm.companyName.label}" encoding="htmlcontent" />
+        </label>
+        <input type="text" class="form-control" id="companyName"
+            <isprint value="${pdict.addressForm.companyName.attributes}" encoding="off" />
+            autocomplete="address-line1">
+        <div class="invalid-feedback"></div>
+    </div>
+    <iscomment> Vat </iscomment>
+    <div class="form-group
+        ${pdict.addressForm.vat.mandatory === true ? 'required' : ''}">
+        <label class="form-control-label" for="vat">
+            <isprint value="${pdict.addressForm.vat.label}" encoding="htmlcontent" />
+        </label>
+        <input type="number" class="form-control" id="vat"
+            <isprint value="${pdict.addressForm.vat.attributes}" encoding="off" />
+            autocomplete="address-line1">
+        <div class="invalid-feedback"></div>
+    </div>
     <!-- Address 1 -->
     <div class="form-group
         ${pdict.addressForm.address1.mandatory === true ? 'required' : ''}">
@@ -87,27 +123,8 @@
                 <div class="invalid-feedback"></div>
             </div>
         </div>
-
-        <!-- State  -->
-        <div class="col-6">
-            <div class="form-group
-                ${pdict.addressForm.states.stateCode.mandatory === true ? 'required' : ''}">
-                <label class="form-control-label" for="state">
-                    <isprint value="${pdict.addressForm.states.stateCode.label}" encoding="htmlcontent" />
-                </label>
-                <select class="form-control" id="state"
-                    <isprint value="${pdict.addressForm.states.stateCode.attributes}" encoding="off" />
-                    autocomplete="address-level1">
-                    <isloop items=${pdict.addressForm.states.stateCode.options} var="state">
-                        <option id="${state.id}" value="${state.htmlValue}" <isif condition="${state.selected}">selected</isif>>${state.label || ' '}</option>
-                    </isloop>
-                </select>
-                <div class="invalid-feedback"></div>
-            </div>
-        </div>
     </div>
 
-    <!-- City and ZIP -->
     <div class="row">
         <div class="col-6">
         <!-- City  -->
@@ -119,20 +136,6 @@
                 <input type="text" class="form-control" id="city"
                     <isprint value="${pdict.addressForm.city.attributes}" encoding="off" />
                     autocomplete="address-level2">
-                <div class="invalid-feedback"></div>
-            </div>
-        </div>
-
-        <!-- ZIP Code -->
-        <div class="col-6">
-            <div class="form-group
-                ${pdict.addressForm.postalCode.mandatory === true ? 'required' : ''}">
-                <label class="form-control-label" for="zipCode">
-                    <isprint value="${pdict.addressForm.postalCode.label}" encoding="htmlcontent" />
-                </label>
-                <input type="text" class="form-control" id="zipCode"
-                    <isprint value="${pdict.addressForm.postalCode.attributes}" encoding="off" />
-                    autocomplete="postal-code">
                 <div class="invalid-feedback"></div>
             </div>
         </div>

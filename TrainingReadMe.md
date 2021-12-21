@@ -63,3 +63,10 @@
 
 ### Information
     Files: customCarousel.json, customCarousel.js and the template customCarousel.isml
+
+# Forms
+
+## 1. Example  
+
+### Example  
+    Example: Example  

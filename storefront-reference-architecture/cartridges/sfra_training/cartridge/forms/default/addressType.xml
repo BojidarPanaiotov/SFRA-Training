@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<form xmlns="http://www.demandware.com/xml/form/2008-04-19">
+
+    <field 
+    formid="bussinesAddress" 
+    label="Bussines Address" 
+    type="boolean" 
+    binding="bussinesAddres"
+    mandatory="false" />
+    
+    <field 
+    formid="privateAddress" 
+    label="Private Address" 
+    type="boolean" 
+    binding="privateAddress"
+    mandatory="false" />
+</form>
