@@ -1,6 +1,6 @@
 <h3>Bussines Address</h3>
 <form
-    action="${URLUtils.url('FormTesting-Save')}"
+    action="${URLUtils.url('Address-SaveAddress')}"
     class="address-form"
     method="POST"
     <isprint value="${pdict.addressForm.attributes}" encoding="off" />>

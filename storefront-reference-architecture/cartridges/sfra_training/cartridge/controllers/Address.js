@@ -20,6 +20,7 @@ server.replace(
         addressForm.clear();
         res.render('account/editAddAddress', {
             addressForm: addressForm,
+            addressId: 'adress',
             breadcrumbs: [
                 {
                     htmlValue: Resource.msg('global.home', 'common', null),

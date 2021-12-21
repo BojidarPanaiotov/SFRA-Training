@@ -15,24 +15,14 @@ server.get('Show',csrfProtection.generateToken, function (req, res, next) {
     next();
 });
 
-server.post('Save', function (req, res, next) {
-
-    var addressForm = server.forms.getForm('address');
-    
-    res.render('account/editAddAddress',{
-        addressForm: addressForm
-    }); 
-
-    next();
-});
-
 server.get('GetBussinesForm',csrfProtection.generateToken, function (req, res, next) {
 
     var bussinesAddress = server.forms.getForm('bussinesAddress');
     bussinesAddress.clear();
-    
+
     res.render('account/bussinesAddress',{
-        addressForm: bussinesAddress
+        addressForm: bussinesAddress,
+        addressId: 'bussinesAddress'
     }); 
 
     next();
@@ -43,7 +33,8 @@ server.get('GetPrivateForm',csrfProtection.generateToken, function (req, res, ne
     var privateAddress = server.forms.getForm('privateAddress');
     privateAddress.clear();
     res.render('account/privateAddress',{
-        addressForm: privateAddress
+        addressForm: privateAddress,
+        addressId: 'privateAddress'
     }); 
 
     next();

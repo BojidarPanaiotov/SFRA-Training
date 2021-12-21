@@ -14,30 +14,9 @@ server.replace(
 
         var registrationForm = server.forms.getForm('profile');
 
-        // form validation
-        if (registrationForm.customer.email.value.toLowerCase() !==
-            registrationForm.customer.emailconfirm.value.toLowerCase()
-        ) {
-            registrationForm.customer.email.valid = false;
-            registrationForm.customer.emailconfirm.valid = false;
-            registrationForm.customer.emailconfirm.error =
-                Resource.msg('error.message.mismatch.email', 'forms', null);
-            registrationForm.valid = false;
-        }
-
-        if (registrationForm.login.password.value !==
-            registrationForm.login.passwordconfirm.value
-        ) {
-            registrationForm.login.password.valid = false;
-            registrationForm.login.passwordconfirm.valid = false;
-            registrationForm.login.passwordconfirm.error =
-                Resource.msg('error.message.mismatch.password', 'forms', null);
-            registrationForm.valid = false;
-        }
 
         if (!CustomerMgr.isAcceptablePassword(registrationForm.login.password.value)) {
             registrationForm.login.password.valid = false;
-            registrationForm.login.passwordconfirm.valid = false;
             registrationForm.login.passwordconfirm.error =
                 Resource.msg('error.message.password.constraints.not.matched', 'forms', null);
             registrationForm.valid = false;
@@ -45,13 +24,8 @@ server.replace(
 
         // setting variables for the BeforeComplete function
         var registrationFormObj = {
-            firstName: registrationForm.customer.firstname.value,
-            lastName: registrationForm.customer.lastname.value,
-            phone: registrationForm.customer.phone.value,
             email: registrationForm.customer.email.value,
-            emailConfirm: registrationForm.customer.emailconfirm.value,
             password: registrationForm.login.password.value,
-            passwordConfirm: registrationForm.login.passwordconfirm.value,
             validForm: registrationForm.valid,
             form: registrationForm
         };
