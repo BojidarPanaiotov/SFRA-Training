@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<custom-objects xmlns="http://www.demandware.com/xml/impex/customobject/2006-10-31">
+    <custom-object type-id="NEWSLETTER_SUBSCRIPTION" object-id="test">
+        <object-attribute attribute-id="interest">
+            <value>Training</value>
+        </object-attribute>
+        <object-attribute attribute-id="name">Bojidar</object-attribute>
+        <object-attribute attribute-id="verified">false</object-attribute>
+    </custom-object>
+
+</custom-objects>

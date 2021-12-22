@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<library xmlns="http://www.demandware.com/xml/impex/library/2006-10-31" library-id="RefArchSharedLibrary">
+    <content content-id="heroSliderOne">
+        <online-flag>true</online-flag>
+        <searchable-flag>false</searchable-flag>
+        <page-attributes/>
+        <custom-attributes>
+            <custom-attribute attribute-id="body" xml:lang="x-default">&lt;img class="d-block w-100" alt="" src="109666.jpg?$staticlink$" title="" /&gt;</custom-attribute>
+        </custom-attributes>
+    </content>
+
+    <content content-id="heroSliderThree">
+        <online-flag>true</online-flag>
+        <searchable-flag>false</searchable-flag>
+        <page-attributes/>
+        <custom-attributes>
+            <custom-attribute attribute-id="body" xml:lang="x-default">&lt;img class="d-block w-100" alt="" src="wallpapertip_aurora-borealis-wallpaper-hd_2208477.jpg?$staticlink$" title="" /&gt;</custom-attribute>
+        </custom-attributes>
+    </content>
+
+    <content content-id="heroSliderTwo">
+        <online-flag>true</online-flag>
+        <searchable-flag>false</searchable-flag>
+        <page-attributes/>
+        <custom-attributes>
+            <custom-attribute attribute-id="body" xml:lang="x-default">&lt;img class="d-block w-100" alt="" src="215107.jpg?$staticlink$" title="" /&gt;</custom-attribute>
+        </custom-attributes>
+    </content>
+
+    <content content-id="mens-landing-page">
+        <online-flag>true</online-flag>
+        <searchable-flag>true</searchable-flag>
+        <page-attributes/>
+        <custom-attributes>
+            <custom-attribute attribute-id="body" xml:lang="x-default">&lt;h1&gt;Mens landing page&lt;/h1&gt;&#13;
+&lt;img alt="" src="images/homepage/car-suit.jpg?$staticlink$" title="" /&gt;</custom-attribute>
+        </custom-attributes>
+    </content>
+
+    <content content-id="womens-landing-page">
+        <online-flag>true</online-flag>
+        <searchable-flag>true</searchable-flag>
+        <page-attributes/>
+        <custom-attributes>
+            <custom-attribute attribute-id="body" xml:lang="x-default">&lt;h1&gt;Womens landing page&lt;/h1&gt;&#13;
+&lt;img alt="" src="images/homepage/car-dresses.jpg?$staticlink$" title="" /&gt;</custom-attribute>
+        </custom-attributes>
+    </content>
+
+    <content content-id="electronic-landing-page">
+        <online-flag>true</online-flag>
+        <searchable-flag>true</searchable-flag>
+        <page-attributes/>
+        <custom-attributes>
+            <custom-attribute attribute-id="body" xml:lang="x-default">&lt;h1&gt;Electronic landing page&lt;/h1&gt;&#13;
+&lt;p&gt;&lt;img alt="" src="images/SearchBanner/Sony_Sale.jpg?$staticlink$" title="" /&gt;&lt;/p&gt;</custom-attribute>
+        </custom-attributes>
+    </content>
+
+    <content content-id="unique_product_information">
+        <display-name xml:lang="x-default">UniqueProducts</display-name>
+        <online-flag>true</online-flag>
+        <searchable-flag>false</searchable-flag>
+        <page-attributes/>
+        <custom-attributes>
+            <custom-attribute attribute-id="body" xml:lang="x-default">&lt;ul&gt;&#13;
+  &lt;li&gt;Name - {0}&lt;/li&gt;&#13;
+  &lt;li&gt;Short Description - {1}&lt;/li&gt;&#13;
+  &lt;li&gt;Brand - {2}&lt;/li&gt;&#13;
+&lt;/ul&gt;</custom-attribute>
+        </custom-attributes>
+    </content>
+
+    <content content-id="suggest_products_email">
+        <online-flag>true</online-flag>
+        <searchable-flag>true</searchable-flag>
+        <page-attributes/>
+        <custom-attributes>
+            <custom-attribute attribute-id="body" xml:lang="x-default">&lt;h2&gt;Products you may like, with 50% discount!&lt;/h2&gt;&#13; PRODUCTID=25686395M&#13; PRODUCTID=62516752M&#13; PRODUCTID=25752986M&#13;
+&lt;p&gt;For further information visit our website!&lt;/p&gt;</custom-attribute>
+        </custom-attributes>
+    </content>
+
+</library>

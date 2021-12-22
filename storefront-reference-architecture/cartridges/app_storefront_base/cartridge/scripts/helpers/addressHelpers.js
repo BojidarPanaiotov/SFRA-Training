@@ -40,7 +40,7 @@ function updateAddressFields(newAddress, address) {
     newAddress.setLastName(address.lastName || '');
     newAddress.setPhone(address.phone || '');
     newAddress.setPostalCode(address.postalCode || '');
-
+    newAddress.custom.vat = address.vat || '';
     if (address.states && address.states.stateCode) {
         newAddress.setStateCode(address.states.stateCode);
     }

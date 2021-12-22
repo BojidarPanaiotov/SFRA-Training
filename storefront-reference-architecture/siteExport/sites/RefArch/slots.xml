@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<slot-configurations xmlns="http://www.demandware.com/xml/impex/slot/2008-09-08">
+    <slot-configuration slot-id="cat-landing-extra" context="category" context-id="electronics" configuration-id="Electronics - 2021-12-10 14:21:09" assigned-to-site="true">
+        <template>slots/content/contentAssetBody.isml</template>
+        <enabled-flag>true</enabled-flag>
+        <content>
+            <content-assets>
+                <content-asset content-id="electronic-landing-page"/>
+            </content-assets>
+        </content>
+        <customer-groups>
+            <customer-group group-id="Everyone"/>
+        </customer-groups>
+    </slot-configuration>
+
+    <slot-configuration slot-id="cat-landing-extra" context="category" context-id="mens" configuration-id="Mens - 2021-12-10 14:20:24" assigned-to-site="true">
+        <template>slots/content/contentAssetBody.isml</template>
+        <enabled-flag>true</enabled-flag>
+        <content>
+            <content-assets>
+                <content-asset content-id="mens-landing-page"/>
+            </content-assets>
+        </content>
+        <customer-groups>
+            <customer-group group-id="Everyone"/>
+        </customer-groups>
+    </slot-configuration>
+
+    <slot-configuration slot-id="cat-landing-extra" context="category" context-id="womens" configuration-id="Womens - 2021-12-10 14:18:57" assigned-to-site="true">
+        <template>slots/content/contentAssetBody.isml</template>
+        <enabled-flag>true</enabled-flag>
+        <content>
+            <content-assets>
+                <content-asset content-id="womens-landing-page"/>
+            </content-assets>
+        </content>
+        <customer-groups>
+            <customer-group group-id="Everyone"/>
+        </customer-groups>
+    </slot-configuration>
+
+    <slot-configuration slot-id="hore_slider" context="global" configuration-id="New Slot Configuration - 2021-12-08 14:41:18" assigned-to-site="false">
+        <template>slots/category/categoryTile.isml</template>
+        <enabled-flag>true</enabled-flag>
+        <content>
+            <categories>
+                <category category-id="mens-clothing"/>
+                <category category-id="mens-clothing-suits"/>
+                <category category-id="mens-clothing-jackets"/>
+                <category category-id="mens-clothing-dress-shirts"/>
+                <category category-id="mens-clothing-pants"/>
+                <category category-id="mens-clothing-shorts"/>
+                <category category-id="mens-accessories"/>
+                <category category-id="mens-accessories-ties"/>
+                <category category-id="mens-accessories-luggage"/>
+                <category category-id="mens-accessories-gloves"/>
+            </categories>
+        </content>
+    </slot-configuration>
+
+    <slot-configuration slot-id="hero_slider" context="global" configuration-id="New Slot Configuration - 2021-12-08 14:45:52" assigned-to-site="true">
+        <template>slots/content/heroSlider.isml</template>
+        <enabled-flag>true</enabled-flag>
+        <content>
+            <content-assets>
+                <content-asset content-id="heroSliderOne"/>
+                <content-asset content-id="heroSliderTwo"/>
+                <content-asset content-id="heroSliderThree"/>
+            </content-assets>
+        </content>
+        <customer-groups>
+            <customer-group group-id="Unregistered"/>
+        </customer-groups>
+    </slot-configuration>
+
+    <slot-configuration slot-id="featured_products" context="global" configuration-id="New Slot Configuration - 2021-12-09 09:49:56" assigned-to-site="true">
+        <template>slots/product/homePageProductSlot.isml</template>
+        <enabled-flag>true</enabled-flag>
+        <content>
+            <products>
+                <product product-id="008884303989M"/>
+                <product product-id="008885004519M"/>
+                <product product-id="008885005202M"/>
+                <product product-id="008885535525M"/>
+                <product product-id="013742002485M"/>
+            </products>
+        </content>
+        <customer-groups>
+            <customer-group group-id="Everyone"/>
+        </customer-groups>
+    </slot-configuration>
+
+    <slot-configuration slot-id="list-categories" context="global" configuration-id="Registered - 2021-12-20 09:37:00" assigned-to-site="true">
+        <template>slots/category/listCategory.isml</template>
+        <enabled-flag>true</enabled-flag>
+        <content>
+            <categories>
+                <category category-id="mens-clothing-suits"/>
+                <category category-id="mens-clothing-jackets"/>
+                <category category-id="mens-clothing-dress-shirts"/>
+                <category category-id="mens-clothing-shorts"/>
+                <category category-id="mens-clothing-pants"/>
+            </categories>
+        </content>
+        <customer-groups>
+            <customer-group group-id="Registered"/>
+        </customer-groups>
+    </slot-configuration>
+
+    <slot-configuration slot-id="list-categories" context="global" configuration-id="Unregistered - 2021-12-20 09:42:21" default="true" assigned-to-site="true">
+        <template>slots/category/listCategory.isml</template>
+        <enabled-flag>true</enabled-flag>
+        <content>
+            <categories>
+                <category category-id="womens-clothing"/>
+                <category category-id="womens-jewelry"/>
+                <category category-id="womens-accessories"/>
+            </categories>
+        </content>
+        <customer-groups>
+            <customer-group group-id="Unregistered"/>
+        </customer-groups>
+    </slot-configuration>
+
+</slot-configurations>

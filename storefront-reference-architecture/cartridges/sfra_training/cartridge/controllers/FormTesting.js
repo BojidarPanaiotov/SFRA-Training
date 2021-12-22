@@ -21,8 +21,7 @@ server.get('GetBussinesForm',csrfProtection.generateToken, function (req, res, n
     bussinesAddress.clear();
 
     res.render('account/bussinesAddress',{
-        addressForm: bussinesAddress,
-        addressId: 'bussinesAddress'
+        addressForm: bussinesAddress
     }); 
 
     next();
@@ -32,9 +31,9 @@ server.get('GetPrivateForm',csrfProtection.generateToken, function (req, res, ne
 
     var privateAddress = server.forms.getForm('privateAddress');
     privateAddress.clear();
+    
     res.render('account/privateAddress',{
-        addressForm: privateAddress,
-        addressId: 'privateAddress'
+        addressForm: privateAddress
     }); 
 
     next();
