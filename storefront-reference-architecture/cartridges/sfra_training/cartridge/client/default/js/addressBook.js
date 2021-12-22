@@ -1,13 +1,12 @@
-$('#private').click(function () {
-    if ($('#private').is(':checked')) {
-        $('#companyName').attr("disabled", true);
-        $('#vat').attr("disabled", true);
-    }
-});
-
-$('#bussines').click(function () {
-    if ($('#bussines').is(':checked')) {
-        $('#companyName').attr("disabled", false);
-        $('#vat').attr("disabled", false);
-    }
+$(document).ready(function(){
+    $("#private").change(function(){
+        $('.bussines-address').hide();
+        $("#companyName").attr("required", false);
+        $("#vat").attr("required", false);
+    });
+    $("#bussines").change(function(){
+        $('.bussines-address').show();
+        $("#companyName").attr("required", true);
+        $("#vat").attr("required", true);
+    });
 });

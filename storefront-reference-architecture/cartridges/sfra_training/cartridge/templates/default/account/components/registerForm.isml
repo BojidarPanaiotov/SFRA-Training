@@ -1,5 +1,9 @@
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+<isscript>
+        var assets = require('*/cartridge/scripts/assets.js');
+        assets.addJs('/js/test.js');
+</isscript>
 <form
+    id="form" 
     action="${pdict.createAccountUrl}"
     class="registration"
     method="POST"
@@ -54,7 +58,7 @@
 
     <input type="hidden" name="${pdict.csrf.tokenName}" value="${pdict.csrf.token}"/>
 
-    <button type="submit" class="btn btn-block btn-primary">
+    <button type="submit" class="btn btn-block btn-primary" id="send">
         ${Resource.msg('button.createaccount.registration', 'registration', null)}
     </button>
     <div class="privacy-policy">

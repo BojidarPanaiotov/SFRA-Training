@@ -95,6 +95,7 @@ server.post(
     server.middleware.https,
     csrfProtection.validateAjaxRequest,
     function (req, res, next) {
+        var asd = req.form;
         var CustomerMgr = require('dw/customer/CustomerMgr');
         var Resource = require('dw/web/Resource');
         var Site = require('dw/system/Site');

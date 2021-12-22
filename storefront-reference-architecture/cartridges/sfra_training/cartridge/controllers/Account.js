@@ -7,6 +7,7 @@ server.extend(module.superModule);
 server.replace(
     'SubmitRegistration',
     function (req, res, next) {
+        var req = req.body;
         var CustomerMgr = require('dw/customer/CustomerMgr');
         var Resource = require('dw/web/Resource');
 

@@ -40,7 +40,7 @@ function updateAddressFields(newAddress, address) {
     newAddress.setLastName(address.lastName || '');
     newAddress.setPhone(address.phone || '');
     newAddress.setPostalCode(address.postalCode || '');
-    newAddress.custom.vat = address.vat || '';
+    newAddress.custom.vat = address.vat || '0';
     if (address.states && address.states.stateCode) {
         newAddress.setStateCode(address.states.stateCode);
     }
@@ -53,7 +53,7 @@ function updateAddressFields(newAddress, address) {
     newAddress.setPostBox(address.postBox || '');
     newAddress.setSalutation(address.salutation || '');
     newAddress.setSecondName(address.secondName || '');
-    newAddress.setCompanyName(address.companyName || '');
+    newAddress.setCompanyName(address.companyName || 'NA');
     newAddress.setSuffix(address.suffix || '');
     newAddress.setSuite(address.suite || '');
     newAddress.setTitle(address.title || '');
