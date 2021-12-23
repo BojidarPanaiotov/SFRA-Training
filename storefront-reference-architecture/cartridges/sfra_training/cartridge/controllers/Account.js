@@ -2,20 +2,35 @@
 
 var server = require('server');
 
+var csrfProtection = require('*/cartridge/scripts/middleware/csrf');
+
 server.extend(module.superModule);
 
 server.replace(
     'SubmitRegistration',
+    csrfProtection.validateAjaxRequest,
     function (req, res, next) {
-        var req = req.body;
         var CustomerMgr = require('dw/customer/CustomerMgr');
         var Resource = require('dw/web/Resource');
+        var Site = require('dw/system/Site');
 
         var formErrors = require('*/cartridge/scripts/formErrors');
 
         var registrationForm = server.forms.getForm('profile');
+        //TEST CODE
+        var accountHelper = require('*/cartridge/scripts/helpers/accountHelpers');
+        var response = accountHelper.ValidateReCaptchaToken(registrationForm.customer.captachField.htmlValue);
 
 
+        var reCaptchaThreshold = Site
+            .current
+            .preferences
+            .custom.reCaptchaThreshold;
+
+            if(reCaptchaThreshold > response.score){
+                registrationForm.valid = false;
+            }
+        //TEST CODE
         if (!CustomerMgr.isAcceptablePassword(registrationForm.login.password.value)) {
             registrationForm.login.password.valid = false;
             registrationForm.login.passwordconfirm.error =

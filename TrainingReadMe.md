@@ -73,3 +73,11 @@
     Templates: addressForm.isml and editAddAddress.isml
     Form Definition: address.xml
     Front End JS: addressBooks.js and addressFormSubmission.js
+
+## 2. Update Create Account Form
+
+### Information  
+    Controller: Account
+    Route: SubmitRegistration
+    Templates: registerForm.isml
+    Front End JS: eyeIconChanger.js

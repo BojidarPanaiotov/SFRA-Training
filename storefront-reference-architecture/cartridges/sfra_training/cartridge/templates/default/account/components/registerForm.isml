@@ -1,62 +1,54 @@
 <isscript>
         var assets = require('*/cartridge/scripts/assets.js');
-        assets.addJs('/js/test.js');
+        assets.addJs('/js/eyeIconChanger.js');
 </isscript>
-<form
-    id="form" 
-    action="${pdict.createAccountUrl}"
-    class="registration"
-    method="POST"
+<script src="https://www.google.com/recaptcha/api.js?render=6LdWM8EdAAAAAFd6-40O6oHXVHtEgIYX2rSqyTm-"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+<form id="form" action="${pdict.createAccountUrl}" class="registration" method="POST"
     name="${pdict.profileForm.htmlName}">
-
+    <!-- Email -->
     <div class="form-group
-        <isif condition="${!!pdict.profileForm.customer.email.mandatory === true}">required</isif>">
+        <isif condition=" ${!!pdict.profileForm.customer.email.mandatory === true}">required</isif>">
         <label class="form-control-label" for="registration-form-email">
-             <isprint value="${pdict.profileForm.customer.email.label}" encoding="htmlcontent" />
+            <isprint value="${pdict.profileForm.customer.email.label}" encoding="htmlcontent" />
         </label>
-        <input
-            type="text"
-            class="form-control"
-            id="registration-form-email"
-            data-missing-error="${Resource.msg('error.message.required','forms',null)}"
-            data-pattern-mismatch="${Resource.msg('error.message.parse.email.profile.form','forms',null)}"
-            data-range-error="${Resource.msg('error.message.50orless','forms',null)}"
-            aria-describedby="form-email-error"
-            <isprint value=${pdict.profileForm.customer.email.attributes} encoding="off" />>
+        <input type="text" class="form-control" id="registration-form-email"
+            data-missing-error="${Resource.msg('error.message.required', 'forms', null)}"
+            data-pattern-mismatch="${Resource.msg('error.message.parse.email.profile.form', 'forms', null)}"
+            data-range-error="${Resource.msg('error.message.50orless', 'forms', null)}"
+            aria-describedby="form-email-error" <isprint value=${pdict.profileForm.customer.email.attributes}
+            encoding="off" />>
         <div class="invalid-feedback" id="form-email-error"></div>
     </div>
 
-
+    <!-- Password -->
     <div class="form-group
-        <isif condition="${!!pdict.profileForm.login.password.mandatory === true}">required</isif>">
+        <isif condition=" ${!!pdict.profileForm.login.password.mandatory === true}">required</isif>">
         <label class="form-control-label" for="registration-form-password">
             <isprint value="${pdict.profileForm.login.password.label}" encoding="htmlcontent" />
         </label>
-        <input
-            type="password"
-            class="form-control"
-            id="registration-form-password"
-            data-missing-error="${Resource.msg('error.message.required','forms',null)}"
-            data-range-error="${Resource.msg('error.message.8_255characters','forms',null)}"
-            aria-describedby="form-password-error"
-            autocomplete="off"
-            <isprint value=${pdict.profileForm.login.password.attributes} encoding="off" />>
-            <i class="far fa-eye" id="togglePassword"></i>
+        <input type="password" class="form-control" id="registration-form-password"
+            data-missing-error="${Resource.msg('error.message.required', 'forms', null)}"
+            data-range-error="${Resource.msg('error.message.8_255characters', 'forms', null)}"
+            aria-describedby="form-password-error" autocomplete="off" <isprint
+            value=${pdict.profileForm.login.password.attributes} encoding="off" />>
+        <i class="far fa-eye" id="togglePassword"></i>
         <div class="invalid-feedback" id="form-password-error"></div>
     </div>
+    <!-- Captcha -->
+    <input type="hidden" class="form-control" id="captcha" <isprint value="${pdict.profileForm.customer.captachField.attributes}"
+        encoding="off" />>
 
     <div class="form-group custom-control custom-checkbox">
-        <input
-            type="checkbox"
-            class="custom-control-input" id="add-to-email-list"
-            <isprint value=${pdict.profileForm.customer.addtoemaillist.attributes} encoding="off" />
+        <input type="checkbox" class="custom-control-input" id="add-to-email-list" <isprint
+            value=${pdict.profileForm.customer.addtoemaillist.attributes} encoding="off" />
         >
         <label class="custom-control-label" for="add-to-email-list">
             <isprint value="${pdict.profileForm.customer.addtoemaillist.label}" encoding="htmlcontent" />
         </label>
     </div>
 
-    <input type="hidden" name="${pdict.csrf.tokenName}" value="${pdict.csrf.token}"/>
+    <input type="hidden" name="${pdict.csrf.tokenName}" value="${pdict.csrf.token}" />
 
     <button type="submit" class="btn btn-block btn-primary" id="send">
         ${Resource.msg('button.createaccount.registration', 'registration', null)}
@@ -69,14 +61,16 @@
     </div>
 </form>
 <script>
-    const togglePassword = document.querySelector('#togglePassword');
-  const password = document.querySelector('#registration-form-password');
- 
-  togglePassword.addEventListener('click', function (e) {
-    // toggle the type attribute
-    const type = password.getAttribute('type') === 'password' ? 'text' : 'password';
-    password.setAttribute('type', type);
-    // toggle the eye slash icon
-    this.classList.toggle('fa-eye-slash');
-});
+        // 1. Getting the appended captcha element
+        var recaptcha = document.querySelector('.g-recaptcha-response');
+
+        // 2. Getting the captcha token via call
+            grecaptcha.ready(function () {
+                grecaptcha.execute(
+                    '6LdWM8EdAAAAAFd6-40O6oHXVHtEgIYX2rSqyTm-',
+                    { action: 'submit' }
+                ).then(function (token) {
+                    document.getElementById("captcha").value = token;
+                });
+            });
 </script>
