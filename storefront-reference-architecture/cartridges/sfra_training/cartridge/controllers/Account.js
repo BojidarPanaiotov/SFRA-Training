@@ -13,24 +13,14 @@ server.replace(
         var CustomerMgr = require('dw/customer/CustomerMgr');
         var Resource = require('dw/web/Resource');
         var Site = require('dw/system/Site');
+        var reCaptchaService = require('*/cartridge/scripts/reCaptchaService');
 
         var formErrors = require('*/cartridge/scripts/formErrors');
 
         var registrationForm = server.forms.getForm('profile');
-        //TEST CODE
-        var accountHelper = require('*/cartridge/scripts/helpers/accountHelpers');
-        var response = accountHelper.ValidateReCaptchaToken(registrationForm.customer.captachField.htmlValue);
+        // Captcha response
+        var response = reCaptchaService.ValidateReCaptchaToken(registrationForm.customer.captachField.htmlValue);
 
-
-        var reCaptchaThreshold = Site
-            .current
-            .preferences
-            .custom.reCaptchaThreshold;
-
-            if(reCaptchaThreshold > response.score){
-                registrationForm.valid = false;
-            }
-        //TEST CODE
         if (!CustomerMgr.isAcceptablePassword(registrationForm.login.password.value)) {
             registrationForm.login.password.valid = false;
             registrationForm.login.passwordconfirm.error =
@@ -43,7 +33,8 @@ server.replace(
             email: registrationForm.customer.email.value,
             password: registrationForm.login.password.value,
             validForm: registrationForm.valid,
-            form: registrationForm
+            form: registrationForm,
+            captcha: response,
         };
 
         if (registrationForm.valid) {
@@ -67,6 +58,20 @@ server.replace(
                         Transaction.wrap(function () {
                             var error = {};
                             var newCustomer = CustomerMgr.createCustomer(login, password);
+
+                            //ReCaptchaV3 Threshold to be compared with the user score
+                            var reCaptchaThreshold = Site
+                                .current
+                                .preferences
+                                .custom.reCaptchaThreshold;
+
+                            if (reCaptchaThreshold > registrationForm.captcha.score) {
+                                error = {
+                                    captchaError: true,
+                                }
+
+                                throw error;
+                            }
 
                             var authenticateCustomerResult = CustomerMgr.authenticateCustomer(login, password);
                             if (authenticateCustomerResult.status !== 'AUTH_OK') {
@@ -102,8 +107,16 @@ server.replace(
                             registrationForm.validForm = false;
                             registrationForm.form.customer.email.valid = false;
                             registrationForm.form.customer.emailconfirm.valid = false;
-                            registrationForm.form.customer.email.error =
-                                Resource.msg('error.message.username.invalid', 'forms', null);
+
+                            var errorMessage;
+
+                            if(e.captchaError){
+                                errorMessage = Resource.msg('error.message.captcha.low.score', 'forms', null);
+                            }else{
+                                errorMessage = Resource.msg('error.message.username.invalid', 'forms', null);
+                            }
+
+                            registrationForm.form.customer.email.error = errorMessage;
                         }
                     }
                 }

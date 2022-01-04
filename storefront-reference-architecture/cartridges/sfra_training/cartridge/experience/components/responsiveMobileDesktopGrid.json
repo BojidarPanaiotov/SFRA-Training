@@ -5,49 +5,148 @@
     "attribute_definition_groups": [],
     "region_definitions": [
         {
-            "id":"column1",
-            "name":"Column 1",
-            "component_type_exclusions": [{ "type_id": "commerce_layouts.mobileGrid1r1c" },
-                { "type_id": "commerce_layouts.mobileGrid2r1c" },
-                { "type_id": "commerce_layouts.mobileGrid2r2c" },
-                { "type_id": "commerce_layouts.mobileGrid3r1c" },
-                { "type_id": "commerce_layouts.mobileGrid2r3c" },
-                { "type_id": "commerce_layouts.mobileGrid3r2c" },
-                { "type_id": "einstein.einsteinCarousel" },
-                { "type_id": "einstein.einsteinCarouselCategory" },
-                { "type_id": "einstein.einsteinCarouselProduct" },
-                { "type_id": "commerce_layouts.popularCategories" },
-                { "type_id": "commerce_layouts.mobileGridLookBook" }]
+            "id": "column1",
+            "name": "Column 1",
+            "component_type_exclusions": [
+                {
+                    "type_id": "customCarousel"
+                },
+                {
+                    "type_id": "customGrid"
+                },
+                {
+                    "type_id": "customHero"
+                },
+                {
+                    "type_id": "commerce_layouts.mobileGrid1r1c"
+                },
+                {
+                    "type_id": "commerce_layouts.mobileGrid2r1c"
+                },
+                {
+                    "type_id": "commerce_layouts.mobileGrid2r2c"
+                },
+                {
+                    "type_id": "commerce_layouts.mobileGrid3r1c"
+                },
+                {
+                    "type_id": "commerce_layouts.mobileGrid2r3c"
+                },
+                {
+                    "type_id": "commerce_layouts.mobileGrid3r2c"
+                },
+                {
+                    "type_id": "einstein.einsteinCarousel"
+                },
+                {
+                    "type_id": "einstein.einsteinCarouselCategory"
+                },
+                {
+                    "type_id": "einstein.einsteinCarouselProduct"
+                },
+                {
+                    "type_id": "commerce_layouts.popularCategories"
+                },
+                {
+                    "type_id": "commerce_layouts.mobileGridLookBook"
+                }
+            ]
         },
         {
-            "id":"column2",
-            "name":"Column 2",
-            "component_type_exclusions": [{ "type_id": "commerce_layouts.mobileGrid1r1c" },
-                { "type_id": "commerce_layouts.mobileGrid2r1c" },
-                { "type_id": "commerce_layouts.mobileGrid2r2c" },
-                { "type_id": "commerce_layouts.mobileGrid3r1c" },
-                { "type_id": "commerce_layouts.mobileGrid2r3c" },
-                { "type_id": "commerce_layouts.mobileGrid3r2c" },
-                { "type_id": "einstein.einsteinCarousel" },
-                { "type_id": "einstein.einsteinCarouselCategory" },
-                { "type_id": "einstein.einsteinCarouselProduct" },
-                { "type_id": "commerce_layouts.popularCategories" },
-                { "type_id": "commerce_layouts.mobileGridLookBook" }]
+            "id": "column2",
+            "name": "Column 2",
+            "component_type_exclusions": [
+                {
+                    "type_id": "customCarousel"
+                },
+                {
+                    "type_id": "customGrid"
+                },
+                {
+                    "type_id": "customHero"
+                },
+                {
+                    "type_id": "commerce_layouts.mobileGrid1r1c"
+                },
+                {
+                    "type_id": "commerce_layouts.mobileGrid2r1c"
+                },
+                {
+                    "type_id": "commerce_layouts.mobileGrid2r2c"
+                },
+                {
+                    "type_id": "commerce_layouts.mobileGrid3r1c"
+                },
+                {
+                    "type_id": "commerce_layouts.mobileGrid2r3c"
+                },
+                {
+                    "type_id": "commerce_layouts.mobileGrid3r2c"
+                },
+                {
+                    "type_id": "einstein.einsteinCarousel"
+                },
+                {
+                    "type_id": "einstein.einsteinCarouselCategory"
+                },
+                {
+                    "type_id": "einstein.einsteinCarouselProduct"
+                },
+                {
+                    "type_id": "commerce_layouts.popularCategories"
+                },
+                {
+                    "type_id": "commerce_layouts.mobileGridLookBook"
+                }
+            ]
         },
         {
-            "id":"column3",
-            "name":"Column 3",
-            "component_type_exclusions": [{ "type_id": "commerce_layouts.mobileGrid1r1c" },
-                { "type_id": "commerce_layouts.mobileGrid2r1c" },
-                { "type_id": "commerce_layouts.mobileGrid2r2c" },
-                { "type_id": "commerce_layouts.mobileGrid3r1c" },
-                { "type_id": "commerce_layouts.mobileGrid2r3c" },
-                { "type_id": "commerce_layouts.mobileGrid3r2c" },
-                { "type_id": "einstein.einsteinCarousel" },
-                { "type_id": "einstein.einsteinCarouselCategory" },
-                { "type_id": "einstein.einsteinCarouselProduct" },
-                { "type_id": "commerce_layouts.popularCategories" },
-                { "type_id": "commerce_layouts.mobileGridLookBook" }]
+            "id": "column3",
+            "name": "Column 3",
+            "component_type_exclusions": [
+                {
+                    "type_id": "customCarousel"
+                },
+                {
+                    "type_id": "customGrid"
+                },
+                {
+                    "type_id": "customHero"
+                },
+                {
+                    "type_id": "commerce_layouts.mobileGrid1r1c"
+                },
+                {
+                    "type_id": "commerce_layouts.mobileGrid2r1c"
+                },
+                {
+                    "type_id": "commerce_layouts.mobileGrid2r2c"
+                },
+                {
+                    "type_id": "commerce_layouts.mobileGrid3r1c"
+                },
+                {
+                    "type_id": "commerce_layouts.mobileGrid2r3c"
+                },
+                {
+                    "type_id": "commerce_layouts.mobileGrid3r2c"
+                },
+                {
+                    "type_id": "einstein.einsteinCarousel"
+                },
+                {
+                    "type_id": "einstein.einsteinCarouselCategory"
+                },
+                {
+                    "type_id": "einstein.einsteinCarouselProduct"
+                },
+                {
+                    "type_id": "commerce_layouts.popularCategories"
+                },
+                {
+                    "type_id": "commerce_layouts.mobileGridLookBook"
+                }
+            ]
         }
     ]
 }
