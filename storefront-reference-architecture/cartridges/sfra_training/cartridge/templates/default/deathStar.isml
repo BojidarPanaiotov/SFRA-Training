@@ -1,0 +1,4 @@
+<isdecorate template="common/layout/page">
+    <h1 class="text-center">Cat Facts</h1>
+    <p class="text-center">${pdict.catFact}</p>
+</isdecorate>
