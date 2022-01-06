@@ -3,22 +3,20 @@
 function getCatFact() {
     var LocalServiceRegistry = require('dw/svc/LocalServiceRegistry');
 
-    var getFact = dw.svc.LocalServiceRegistry.createService("StarWarsDeathStar", {
+    var getFact = dw.svc.LocalServiceRegistry.createService("CatFact", {
         createRequest: function (svc, args) {
             svc.setRequestMethod("GET");
+            
             return args;
         },
         parseResponse: function (svc, client) {
-
-            var a = 1;
-
             return client.text;
         },
-        filterLogMessage: function(msg) {
-            return msg;
-        }
+        filterLogMessage: function(msg){
+            return msg+'- have been returned as result';
+        },
     });
-    
+
     var result = getFact.call().object;
 
     return JSON.parse(result);

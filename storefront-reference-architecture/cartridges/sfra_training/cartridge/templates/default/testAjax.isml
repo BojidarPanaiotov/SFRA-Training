@@ -1,0 +1,13 @@
+<isdecorate template="common/layout/page">
+    <isscript>
+        var assets = require('*/cartridge/scripts/assets.js');
+        assets.addJs('/js/testAjax.js');
+    </isscript>
+
+    <h1 class="text-center">Testing AJAX</h1>
+
+    <button type="submit" id="sample-btn" class="primary">Click Me</button>
+    <div class="placeholder">
+        
+    </div>
+</isdecorate>
